@@ -10,4 +10,4 @@ license: MIT
 scripts:
   postinstall: ./postinstall.sh
 executables:
-  - minify
+  - es6-minifier

@@ -6,5 +6,5 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   MINIFIER_BIN=macos
 fi
 echo "$MINIFIER_BIN detected, downloading minifier binary..."
-curl -L --url https://github.com/sam0x17/es6-minifier/releases/download/minify-dist/minify-$MINIFIER_BIN --output bin/minify || exit 1
-chmod +x bin/minify || exit 1
+curl -L --url https://github.com/sam0x17/es6-minifier/releases/download/minify-dist/minify-$MINIFIER_BIN --output bin/es6-minifier || exit 1
+chmod +x bin/es6-minifier || exit 1

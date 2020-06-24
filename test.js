@@ -1,1 +1,0 @@
-function some_cool_function(){console.log("this is a thing ok")}
