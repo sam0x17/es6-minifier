@@ -2,10 +2,13 @@
   "name": "minifier",
   "version": "1.0.0",
   "description": "minifies stuff",
-  "main": "index.js",
+  "main": "minify.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "terser": "^4.8.0"
+  }
 }
