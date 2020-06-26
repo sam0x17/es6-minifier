@@ -12,5 +12,5 @@ if [ -e /etc/os-release ]; then
   esac
 fi
 echo "$MINIFIER_BIN detected, downloading minifier binary..."
-wget https://github.com/sam0x17/es6-minifier/releases/download/0.1.2/minify-$MINIFIER_BIN -O bin/es6-minifier
+wget https://github.com/sam0x17/es6-minifier/releases/download/0.1.3/minify-$MINIFIER_BIN -O bin/es6-minifier
 chmod +x bin/es6-minifier || exit 1
