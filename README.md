@@ -1,39 +1,33 @@
 # es6-minifier
-
-TODO: Write a description here
-
-## Installation
-
-1. Add the dependency to your `shard.yml`:
-
-   ```yaml
-   dependencies:
-     es6-minifier:
-       github: your-github-user/es6-minifier
-   ```
-
-2. Run `shards install`
+Embeds Terser (current standard es6 minification tool in the NPM ecosystem) in
+a crystal shard via a cross-platform pkg-powered binary that embeds Terser
+in a lightweight portable nodejs environment. No nodejs required.
 
 ## Usage
 
+Just install
+the shard and you can minify your ES6+ Javascript as follows:
+
 ```crystal
 require "es6-minifier"
+
+Es6Minifier.minify!("const  something = 3;") # => "const something=3;"
+
+Es6Minifier.minify!(["file1.js", "file2.js"])
+# file1.js and file2.js are overwritten with a minified version of their contents
 ```
 
-TODO: Write usage instructions here
+If a parsing or IO error occurs, `Es6Minifier.minify!` will throw an error.
 
-## Development
+Right now there are no configurable options however this could be easily
+added by passing JSON options to `minify.js` and adding a bit of code
+on the crystal side. Pull requests welcome!
 
-TODO: Write development instructions here
+## Installation
 
-## Contributing
-
-1. Fork it (<https://github.com/your-github-user/es6-minifier/fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
-
-## Contributors
-
-- [Sam Johnson](https://github.com/your-github-user) - creator and maintainer
+Just add the following to yoour `shard.yml`:
+```
+dependencies:
+  es6-minifier:
+    github: sam0x17/es6-minifier
+```
