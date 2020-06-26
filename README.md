@@ -23,6 +23,9 @@ Right now there are no configurable options however this could be easily
 added by passing JSON options to `minify.js` and adding a bit of code
 on the crystal side. Pull requests welcome!
 
+Currently supports linux, macos, and alpine. Could easily support FreeBSD
+and Windows with a several line change.
+
 ## Installation
 
 Just add the following to yoour `shard.yml`:
