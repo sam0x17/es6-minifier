@@ -18,7 +18,7 @@ elif type curl > /dev/null; then
   curl -L --url https://github.com/sam0x17/es6-minifier/releases/download/0.1.2/minify-$MINIFIER_BIN --output bin/es6-minifier || exit 1
 else
   echo "neither wget or curl were found, attempting to install wget"
-  apk add wget || apt install wget || yum install wget
+  apk add wget || apt install wget || yum install wget || exit 1
   wget https://github.com/sam0x17/es6-minifier/releases/download/0.1.3/minify-$MINIFIER_BIN -O bin/es6-minifier || exit 1
 fi
 chmod +x bin/es6-minifier
