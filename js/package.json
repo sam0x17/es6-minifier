@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "terser": "^4.8.0"
+    "terser": "^4.8.1"
   }
 }
